@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service — Fr.</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --surface: #f7f7f5;
+    --border: #e5e4df;
+    --text: #1a1a18;
+    --muted: #6b6b67;
+    --accent: #2563eb;
+    --danger-bg: #fef2f2;
+    --danger-border: #fecaca;
+    --info-bg: #eff6ff;
+    --info-border: #bfdbfe;
+    --warn-bg: #fffbeb;
+    --warn-border: #fde68a;
+    --success-bg: #f0fdf4;
+    --success-border: #bbf7d0;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #18181a;
+      --surface: #222224;
+      --border: #333336;
+      --text: #e8e8e4;
+      --muted: #9c9c97;
+      --accent: #60a5fa;
+      --danger-bg: #2c1515;
+      --danger-border: #7f1d1d;
+      --info-bg: #172040;
+      --info-border: #1e3a8a;
+      --warn-bg: #2c2000;
+      --warn-border: #78350f;
+      --success-bg: #052e16;
+      --success-border: #14532d;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--text);
+    background: var(--bg);
+    padding: 0 1rem;
+  }
+  .page { max-width: 760px; margin: 0 auto; padding: 3rem 0 6rem; }
+  .logo { display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: #2563eb; border-radius: 14px; color: #fff; font-size: 20px; font-weight: 700; margin-bottom: 2rem; }
+  h1 { font-size: 2rem; font-weight: 700; margin-bottom: .5rem; }
+  .meta { color: var(--muted); font-size: 14px; margin-bottom: 2.5rem; }
+  .toc { background: var(--surface); border: 0.5px solid var(--border); border-radius: 12px; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+  .toc-title { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin-bottom: .75rem; }
+  .toc ol { padding-left: 1.25rem; }
+  .toc li { font-size: 14px; margin-bottom: .25rem; }
+  .toc a { color: var(--accent); text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+  h2 { font-size: 1.3rem; font-weight: 700; margin: 2.5rem 0 1rem; padding-bottom: .5rem; border-bottom: 0.5px solid var(--border); }
+  h3 { font-size: 1rem; font-weight: 600; margin: 1.5rem 0 .5rem; }
+  p { margin-bottom: 1rem; color: var(--text); }
+  ul, ol { margin: .5rem 0 1rem 1.5rem; }
+  li { margin-bottom: .35rem; }
+  .callout { border-radius: 10px; padding: 1rem 1.25rem; margin: 1.25rem 0; font-size: 15px; }
+  .callout-info { background: var(--info-bg); border: 0.5px solid var(--info-border); }
+  .callout-warn { background: var(--warn-bg); border: 0.5px solid var(--warn-border); }
+  .callout-danger { background: var(--danger-bg); border: 0.5px solid var(--danger-border); }
+  .callout-success { background: var(--success-bg); border: 0.5px solid var(--success-border); }
+  .callout-label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; margin-bottom: .3rem; color: var(--muted); }
+  a { color: var(--accent); }
+  .contact-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: 12px; padding: 1.25rem 1.5rem; margin-top: 1rem; }
+  .contact-card strong { display: block; margin-bottom: .25rem; }
+  .prohibited-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 1rem 0 1.5rem; }
+  .prohibited-item { background: var(--danger-bg); border: 0.5px solid var(--danger-border); border-radius: 8px; padding: 8px 12px; font-size: 14px; }
+  @media (max-width: 500px) { .prohibited-grid { grid-template-columns: 1fr; } }
+  .sanction-table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 1rem 0 1.5rem; }
+  .sanction-table th { background: var(--surface); font-weight: 600; text-align: left; padding: 10px 12px; border: 0.5px solid var(--border); font-size: 13px; }
+  .sanction-table td { padding: 10px 12px; border: 0.5px solid var(--border); vertical-align: top; }
+  .sanction-table tr:nth-child(even) td { background: var(--surface); }
+  .footer { color: var(--muted); font-size: 13px; margin-top: 3rem; padding-top: 1.5rem; border-top: 0.5px solid var(--border); }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="logo">Fr.</div>
+  <h1>Terms of Service</h1>
+  <p class="meta">Effective date: March 27, 2026 &nbsp;·&nbsp; Last updated: March 27, 2026 &nbsp;·&nbsp; Version 1.0</p>
+
+  <div class="callout callout-warn">
+    <div class="callout-label">Please read carefully</div>
+    By creating an account or using Fr., you agree to these Terms of Service. If you do not agree, do not use Fr. These terms contain provisions about dispute resolution, limitation of liability, and your rights in Sections 15–17.
+  </div>
+
+  <div class="toc">
+    <div class="toc-title">Contents</div>
+    <ol>
+      <li><a href="#acceptance">Acceptance of terms</a></li>
+      <li><a href="#eligibility">Eligibility and age requirements</a></li>
+      <li><a href="#accounts">Accounts and registration</a></li>
+      <li><a href="#guest">Guest accounts</a></li>
+      <li><a href="#conduct">Acceptable use and conduct</a></li>
+      <li><a href="#prohibited">Prohibited content and behaviour</a></li>
+      <li><a href="#ugc">User-generated content</a></li>
+      <li><a href="#ephemerality">Ephemeral messages</a></li>
+      <li><a href="#moderation">Moderation and enforcement</a></li>
+      <li><a href="#appeals">Appeals process</a></li>
+      <li><a href="#minors">Minors and child safety</a></li>
+      <li><a href="#e2ee">End-to-end encryption</a></li>
+      <li><a href="#ip">Intellectual property</a></li>
+      <li><a href="#termination">Account deletion and termination</a></li>
+      <li><a href="#disclaimer">Disclaimers</a></li>
+      <li><a href="#liability">Limitation of liability</a></li>
+      <li><a href="#disputes">Disputes and governing law</a></li>
+      <li><a href="#changes">Changes to these terms</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+  </div>
+
+  <!-- 1 -->
+  <h2 id="acceptance">1. Acceptance of terms</h2>
+  <p>These Terms of Service ("Terms") form a legally binding agreement between you and <strong>[YOUR COMPANY LEGAL NAME]</strong> ("Fr.", "we", "us", "our") governing your use of the Fr. mobile application and related services (collectively, the "Service").</p>
+  <p>By tapping "Continue with Google", "Continue with Apple", "Continue as Guest", or otherwise accessing or using Fr., you confirm that you have read, understood, and agree to be bound by these Terms and our <a href="./fr-privacy-policy.html">Privacy Policy</a>.</p>
+  <p>If you are using Fr. on behalf of an organisation, you represent that you have the authority to bind that organisation to these Terms.</p>
+
+  <!-- 2 -->
+  <h2 id="eligibility">2. Eligibility and age requirements</h2>
+  <p><strong>Fr. is available to users aged 13 and above only.</strong></p>
+  <ul>
+    <li>Users under 13 are not permitted to create an account.</li>
+    <li>Users aged 13–17 are considered minors and are subject to additional safety restrictions described in Section 11.</li>
+    <li>By creating an account you represent that you are at least 13 years old.</li>
+    <li>Age is currently self-reported via our onboarding screen. We rely on you providing your accurate age. If we discover or receive credible evidence that a user has falsified their age, we reserve the right to suspend or terminate the account without notice.</li>
+  </ul>
+
+  <div class="callout callout-info">
+    <div class="callout-label">Australian users</div>
+    Fr. is a messaging application and currently falls outside the scope of Australia's Online Safety Amendment (Social Media Minimum Age) Act 2024, which excludes messaging services from the under-16 age restriction. We will update these Terms if our classification changes.
+  </div>
+
+  <!-- 3 -->
+  <h2 id="accounts">3. Accounts and registration</h2>
+  <p>You may sign up using Google Sign-In, Apple Sign-In, or by starting as a Guest and later converting your account with phone number verification.</p>
+  <ul>
+    <li>You are responsible for maintaining the confidentiality of your account.</li>
+    <li>You must provide accurate information during registration and onboarding.</li>
+    <li>You may not create more than one account to evade moderation actions. Doing so is grounds for permanent ban.</li>
+    <li>You must promptly notify us at <a href="mailto:support@fr.app">support@fr.app</a> if you believe your account has been compromised.</li>
+    <li>Accounts are personal and non-transferable.</li>
+  </ul>
+
+  <!-- 4 -->
+  <h2 id="guest">4. Guest accounts</h2>
+  <p>Fr. offers a limited "Guest" experience that does not require registration:</p>
+  <ul>
+    <li>Guest accounts expire after <strong>7 days</strong> or after sending <strong>20 messages</strong>, whichever comes first.</li>
+    <li>After expiry, you will be asked to convert your account with phone or social sign-in to continue.</li>
+    <li>Guest account data (messages, streaks) is tied to your device. We cannot recover guest data if you uninstall the app before converting.</li>
+    <li>Guest accounts have the same Code of Conduct obligations as verified accounts.</li>
+  </ul>
+
+  <!-- 5 -->
+  <h2 id="conduct">5. Acceptable use and conduct</h2>
+  <p>You agree to use Fr. only for lawful purposes and in a manner that does not infringe the rights of others. You agree to:</p>
+  <ul>
+    <li>Treat all users with respect, regardless of their age group, gender, background, or beliefs</li>
+    <li>Report content or behaviour that you believe violates these Terms using the in-app report function</li>
+    <li>Not attempt to circumvent technical measures we use to enforce these Terms</li>
+    <li>Comply with all applicable local, national, and international laws and regulations</li>
+  </ul>
+
+  <!-- 6 -->
+  <h2 id="prohibited">6. Prohibited content and behaviour</h2>
+  <p>The following are strictly prohibited on Fr.:</p>
+  <div class="prohibited-grid">
+    <div class="prohibited-item">Child sexual abuse material (CSAM) or grooming of minors</div>
+    <div class="prohibited-item">Threats, harassment, or targeted abuse of any user</div>
+    <div class="prohibited-item">Non-consensual sharing of intimate images</div>
+    <div class="prohibited-item">Incitement to violence or terrorism</div>
+    <div class="prohibited-item">Hate speech based on race, ethnicity, religion, gender, sexuality, disability, or nationality</div>
+    <div class="prohibited-item">Impersonation of another person or entity</div>
+    <div class="prohibited-item">Spam, phishing, or deceptive content</div>
+    <div class="prohibited-item">Distribution of malware or malicious links</div>
+    <div class="prohibited-item">Solicitation or facilitation of illegal activities</div>
+    <div class="prohibited-item">Creating multiple accounts to evade suspension or ban</div>
+    <div class="prohibited-item">Attempting to reverse-engineer, scrape, or attack Fr.'s infrastructure</div>
+    <div class="prohibited-item">Facilitating or encouraging self-harm or suicide</div>
+  </div>
+  <p>Violation of these prohibitions may result in immediate account suspension or permanent termination, and may be reported to law enforcement where required by law.</p>
+
+  <!-- 7 -->
+  <h2 id="ugc">7. User-generated content</h2>
+  <p>Fr. allows users to send messages, share stories, post profile photos, and interact with other users. You retain ownership of the content you create.</p>
+  <p>By submitting content to Fr., you grant us a limited, non-exclusive, royalty-free licence to store, process, and transmit that content solely to provide the Service to you and your recipients. We do not claim ownership of your content and do not use it for advertising.</p>
+  <p>You represent and warrant that:</p>
+  <ul>
+    <li>You own or have the rights to all content you submit</li>
+    <li>Your content does not violate any third party's intellectual property rights, privacy rights, or any applicable law</li>
+    <li>Your content complies with Section 6 of these Terms</li>
+  </ul>
+  <p>We are not responsible for content created by other users. If you encounter content that violates these Terms, please use the in-app report function.</p>
+
+  <!-- 8 -->
+  <h2 id="ephemerality">8. Ephemeral messages</h2>
+  <p>Fr. is designed around message ephemerality. Messages sent in non-permanent chats are automatically deleted from our servers after the expiry period selected for that chat.</p>
+  <ul>
+    <li>We do not guarantee message delivery after expiry. Do not use Fr. to communicate time-critical or legally important information.</li>
+    <li>The other party in a conversation may take screenshots or copies of messages before they expire. Fr. uses screenshot detection to alert you when this occurs, but we cannot prevent it.</li>
+    <li>For end-to-end encrypted chats: if you lose access to your private key (e.g. by uninstalling the app without a recovery backup), those messages cannot be recovered — by you or by us.</li>
+    <li>Permanent chats (where both users have opted in) are not subject to automatic expiry.</li>
+  </ul>
+
+  <!-- 9 -->
+  <h2 id="moderation">9. Moderation and enforcement</h2>
+  <p>We take the safety of our community seriously. Fr. operates a moderation system that includes:</p>
+  <ul>
+    <li>User reports — any user can report any other user or content via the in-app report button</li>
+    <li>Automated detection — we may use automated tools to detect prohibited content patterns</li>
+    <li>Human review — our moderation team reviews reported content and user reports</li>
+  </ul>
+
+  <h3>9.1 Sanctions</h3>
+  <p>Depending on severity and recurrence, enforcement actions may include:</p>
+  <table class="sanction-table">
+    <tr><th>Action</th><th>Description</th></tr>
+    <tr><td>Warning</td><td>Notification of violation — no access restriction</td></tr>
+    <tr><td>Temporary suspension</td><td>Account locked for a defined period (24 hours to 30 days). Reason is shown in the app.</td></tr>
+    <tr><td>Permanent suspension</td><td>Account permanently deactivated. All content removed.</td></tr>
+    <tr><td>Permanent ban</td><td>Account deleted and hashed identifiers (phone, device) added to ban registry to prevent re-registration. Applied for the most serious violations including CSAM, credible threats of violence, and systematic ban evasion.</td></tr>
+    <tr><td>Law enforcement referral</td><td>For content involving child exploitation, credible threats of violence, or other criminal matters, we will proactively report to relevant authorities.</td></tr>
+  </table>
+  <p>We reserve the right to take action on accounts that we reasonably believe violate these Terms, at our sole discretion.</p>
+
+  <!-- 10 -->
+  <h2 id="appeals">10. Appeals process</h2>
+  <p>If your account has been suspended or terminated and you believe this was in error, you have the right to appeal.</p>
+  <ol>
+    <li>Email <a href="mailto:appeals@fr.app">appeals@fr.app</a> with the subject line: <strong>"Account Appeal – [your username or display name]"</strong></li>
+    <li>Include your account's registered phone number (if applicable) and a description of why you believe the action was incorrect</li>
+    <li>We will acknowledge your appeal within <strong>5 business days</strong></li>
+    <li>A final decision will be communicated within <strong>30 days</strong></li>
+  </ol>
+  <p>Permanent bans for child safety violations are not subject to appeal.</p>
+  <div class="callout callout-info">
+    <div class="callout-label">Suspended? You can still appeal</div>
+    Even if you cannot access the Fr. app due to a suspension, you can always reach us at <a href="mailto:appeals@fr.app">appeals@fr.app</a> to submit an appeal. Suspended users retain this right.
+  </div>
+
+  <!-- 11 -->
+  <h2 id="minors">11. Minors and child safety</h2>
+  <p>The safety of minor users (aged 13–17) is a top priority.</p>
+  <ul>
+    <li>Direct messages between users identified as minors and users identified as adults are blocked at the database level. This cannot be overridden by either party.</li>
+    <li>Minor accounts are subject to enhanced moderation review.</li>
+    <li>If you are a parent or guardian and believe your child is using Fr. in a way that endangers them, please contact <a href="mailto:safety@fr.app">safety@fr.app</a> immediately. We treat all child safety reports as urgent.</li>
+    <li>We have a zero-tolerance policy for any form of child grooming, exploitation, or sexual content involving minors. We report all credible cases of child exploitation to the relevant authorities including NCMEC (National Center for Missing &amp; Exploited Children) in the USA, and equivalent bodies in other jurisdictions.</li>
+  </ul>
+  <p><strong>If you encounter any content or behaviour you believe puts a child at risk, please report it immediately using the in-app report button or by emailing <a href="mailto:safety@fr.app">safety@fr.app</a>.</strong></p>
+
+  <!-- 12 -->
+  <h2 id="e2ee">12. End-to-end encryption</h2>
+  <p>Fr. offers end-to-end encryption (E2EE) as an opt-in feature for conversations. When enabled:</p>
+  <ul>
+    <li>Messages are encrypted on your device before transmission using X25519 + XSalsa20-Poly1305</li>
+    <li>Only you and your recipient(s) can decrypt the messages</li>
+    <li>Fr. cannot access, read, or hand over the content of E2EE messages to any party, including law enforcement</li>
+    <li>If you lose your private key (by uninstalling without a recovery backup), E2EE messages cannot be recovered</li>
+    <li>Enabling E2EE on an existing chat will delete all prior non-encrypted messages in that chat — this action is irreversible</li>
+  </ul>
+
+  <!-- 13 -->
+  <h2 id="ip">13. Intellectual property</h2>
+  <p>The Fr. name, logo, app design, and code are the intellectual property of [YOUR COMPANY LEGAL NAME] and are protected by copyright, trademark, and other applicable laws.</p>
+  <p>You may not:</p>
+  <ul>
+    <li>Copy, modify, distribute, sell, or lease any part of our Service or software</li>
+    <li>Reverse engineer or attempt to extract the source code of our app</li>
+    <li>Use the Fr. name, logo, or branding without our prior written consent</li>
+  </ul>
+  <p>Feedback or suggestions you provide about Fr. may be used by us without obligation to you.</p>
+
+  <!-- 14 -->
+  <h2 id="termination">14. Account deletion and termination</h2>
+
+  <h3>14.1 Deletion by you</h3>
+  <p>You may delete your account at any time from Profile → menu → Delete Account. Upon deletion:</p>
+  <ul>
+    <li>Your account enters a 7-day grace period during which you may reactivate by signing in</li>
+    <li>After 7 days, your account and all associated data are permanently and irreversibly deleted from our systems</li>
+    <li>Hashed ban identifiers (phone hash, device hash) may be retained if your account was suspended for policy violations, to prevent re-registration</li>
+  </ul>
+
+  <h3>14.2 Termination by Fr.</h3>
+  <p>We reserve the right to suspend or terminate your account at any time, with or without notice, if:</p>
+  <ul>
+    <li>You violate these Terms</li>
+    <li>We are required to do so by law</li>
+    <li>We determine that your use of the Service poses a risk to other users or to Fr.</li>
+  </ul>
+  <p>Upon termination, your right to use Fr. ceases immediately. Sections 7, 13, 15, 16, and 17 of these Terms survive termination.</p>
+
+  <!-- 15 -->
+  <h2 id="disclaimer">15. Disclaimers</h2>
+  <p>Fr. is provided "as is" and "as available" without any warranties of any kind, either express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, or non-infringement.</p>
+  <p>We do not warrant that:</p>
+  <ul>
+    <li>The Service will be uninterrupted, error-free, or secure</li>
+    <li>Messages will always be delivered</li>
+    <li>The Service will be free from bugs, viruses, or other harmful components</li>
+    <li>Any content or information obtained through the Service will be accurate or reliable</li>
+  </ul>
+  <p>Some jurisdictions do not allow the exclusion of implied warranties, so some of the above may not apply to you.</p>
+
+  <!-- 16 -->
+  <h2 id="liability">16. Limitation of liability</h2>
+  <p>To the maximum extent permitted by applicable law, [YOUR COMPANY LEGAL NAME] and its officers, employees, and agents shall not be liable for:</p>
+  <ul>
+    <li>Any indirect, incidental, special, consequential, or punitive damages</li>
+    <li>Loss of profits, data, goodwill, or other intangible losses</li>
+    <li>Damages arising from your reliance on content posted by other users</li>
+    <li>Damages arising from unauthorised access to your account</li>
+    <li>Damages arising from the deletion or loss of your messages</li>
+  </ul>
+  <p>Our total liability to you for any claim arising from these Terms or the Service shall not exceed the greater of (a) the amount you paid us in the 12 months preceding the claim, or (b) USD $100.</p>
+  <p>Consumer protection laws in some jurisdictions (including EU, UK, and Australian consumer law) may grant you rights that cannot be excluded by these Terms. Nothing in this Section limits rights you have under mandatory applicable law.</p>
+
+  <!-- 17 -->
+  <h2 id="disputes">17. Disputes and governing law</h2>
+  <p>These Terms are governed by the laws of <strong>[YOUR JURISDICTION]</strong>, without regard to conflict of law principles.</p>
+
+  <h3>17.1 Informal resolution</h3>
+  <p>Before filing any formal legal claim, you agree to first contact us at <a href="mailto:legal@fr.app">legal@fr.app</a> and attempt to resolve the dispute informally for at least 30 days.</p>
+
+  <h3>17.2 EU and UK users</h3>
+  <p>If you are a consumer located in the EU or UK, you may also bring a dispute before the courts of your country of residence and may use the European Commission's Online Dispute Resolution (ODR) platform at <a href="https://ec.europa.eu/consumers/odr" target="_blank">ec.europa.eu/consumers/odr</a>.</p>
+  <p>Nothing in these Terms limits your rights under mandatory consumer protection laws in your country of residence.</p>
+
+  <h3>17.3 Australian users</h3>
+  <p>If you are a consumer in Australia, you have rights under the Australian Consumer Law (ACL) that cannot be excluded by these Terms, including consumer guarantees relating to the supply of services.</p>
+
+  <!-- 18 -->
+  <h2 id="changes">18. Changes to these terms</h2>
+  <p>We may update these Terms from time to time. When we make material changes, we will:</p>
+  <ul>
+    <li>Update the "Last updated" date at the top of this document</li>
+    <li>Notify you via an in-app notice at least 14 days before the changes take effect for material changes</li>
+    <li>For significant changes that affect your legal rights, we may ask you to re-accept the Terms</li>
+  </ul>
+  <p>If you continue to use Fr. after updated Terms take effect, you accept the revised Terms. If you do not agree to the updated Terms, you may delete your account.</p>
+
+  <!-- 19 -->
+  <h2 id="contact">19. Contact</h2>
+  <div class="contact-card">
+    <strong>General support</strong>
+    <a href="mailto:support@fr.app">support@fr.app</a>
+    <br><br>
+    <strong>Appeals (account suspensions)</strong>
+    <a href="mailto:appeals@fr.app">appeals@fr.app</a>
+    <br><br>
+    <strong>Child safety reports (urgent)</strong>
+    <a href="mailto:safety@fr.app">safety@fr.app</a>
+    <br><br>
+    <strong>Legal &amp; regulatory</strong>
+    <a href="mailto:legal@fr.app">legal@fr.app</a>
+    <br><br>
+    <strong>Privacy requests</strong>
+    <a href="mailto:privacy@fr.app">privacy@fr.app</a>
+    <br><br>
+    <strong>Postal address</strong><br>
+    [YOUR COMPANY LEGAL NAME]<br>
+    [ADDRESS LINE 1]<br>
+    [CITY, STATE/COUNTRY, POSTAL CODE]
+  </div>
+
+  <div class="footer">
+    <p>© 2026 [YOUR COMPANY LEGAL NAME]. All rights reserved.</p>
+    <p style="margin-top:.5rem">These Terms were drafted for compliance with: Apple App Store Review Guidelines · Google Play Developer Program Policies · GDPR (EU) · UK GDPR · CCPA/CPRA · COPPA · Australian Consumer Law · Australia Online Safety Amendment Act 2024</p>
+  </div>
+
+</div>
+</body>
+</html>
