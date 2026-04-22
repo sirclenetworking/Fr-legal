@@ -4,81 +4,156 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacy Policy — Fr.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&family=Nunito:wght@400;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #ffffff;
-    --surface: #f7f7f5;
-    --border: #e5e4df;
-    --text: #1a1a18;
-    --muted: #6b6b67;
-    --accent: #2563eb;
-    --danger-bg: #fef2f2;
-    --danger-border: #fecaca;
-    --info-bg: #eff6ff;
-    --info-border: #bfdbfe;
-    --warn-bg: #fffbeb;
-    --warn-border: #fde68a;
-    --success-bg: #f0fdf4;
-    --success-border: #bbf7d0;
+    --bg:             #FFFFFF;
+    --surface:        #F7F7F7;
+    --border:         #E8E8E8;
+    --text:           #111111;
+    --muted:          #888888;
+    --primary:        #C4614A;
+    --primary-text:   #FFFFFF;
+    --danger-surface: rgba(217,48,37,0.07);
+    --danger-border:  rgba(217,48,37,0.2);
+    --success-surface:rgba(52,168,83,0.07);
+    --success-border: rgba(52,168,83,0.2);
+    --warning-surface:rgba(227,116,0,0.07);
+    --warning-border: rgba(227,116,0,0.2);
+    --info-surface:   rgba(196,97,74,0.07);
+    --info-border:    rgba(196,97,74,0.2);
+    --radius-xs: 8px;
+    --radius-sm: 12px;
+    --radius-md: 16px;
+    --font-heading: 'Bricolage Grotesque', sans-serif;
+    --font-body:    'Nunito', sans-serif;
+    --font-mono:    'DM Mono', monospace;
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #18181a;
-      --surface: #222224;
-      --border: #333336;
-      --text: #e8e8e4;
-      --muted: #9c9c97;
-      --accent: #60a5fa;
-      --danger-bg: #2c1515;
-      --danger-border: #7f1d1d;
-      --info-bg: #172040;
-      --info-border: #1e3a8a;
-      --warn-bg: #2c2000;
-      --warn-border: #78350f;
-      --success-bg: #052e16;
-      --success-border: #14532d;
+      --bg:             #0D0D0D;
+      --surface:        #1A1A1A;
+      --border:         #2A2A2A;
+      --text:           #F0F0F0;
+      --muted:          #888888;
+      --primary:        #F0836A;
+      --primary-text:   #FFFFFF;
+      --danger-surface: rgba(232,96,96,0.12);
+      --danger-border:  rgba(232,96,96,0.3);
+      --success-surface:rgba(76,175,130,0.12);
+      --success-border: rgba(76,175,130,0.3);
+      --warning-surface:rgba(240,160,106,0.12);
+      --warning-border: rgba(240,160,106,0.3);
+      --info-surface:   rgba(240,131,106,0.1);
+      --info-border:    rgba(240,131,106,0.3);
     }
   }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
   body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.75;
-    color: var(--text);
-    background: var(--bg);
-    padding: 0 1rem;
+    font-family: var(--font-body);
+    font-size: 16px; line-height: 1.75;
+    color: var(--text); background: var(--bg);
+    padding: 0 1.25rem;
+    -webkit-font-smoothing: antialiased;
   }
-  .page { max-width: 760px; margin: 0 auto; padding: 3rem 0 6rem; }
-  .logo { display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: #2563eb; border-radius: 14px; color: #fff; font-size: 20px; font-weight: 700; margin-bottom: 2rem; }
-  h1 { font-size: 2rem; font-weight: 700; margin-bottom: .5rem; }
-  .meta { color: var(--muted); font-size: 14px; margin-bottom: 2.5rem; }
-  .toc { background: var(--surface); border: 0.5px solid var(--border); border-radius: 12px; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
-  .toc-title { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin-bottom: .75rem; }
+  .page { max-width: 740px; margin: 0 auto; padding: 3rem 0 6rem; }
+  .logo {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 52px; height: 52px;
+    background: var(--primary); border-radius: var(--radius-sm);
+    color: var(--primary-text);
+    font-family: var(--font-heading); font-size: 20px; font-weight: 700;
+    margin-bottom: 1.5rem; letter-spacing: -0.5px;
+  }
+  h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 5vw, 2.25rem);
+    font-weight: 700; letter-spacing: -0.03em; line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+  .meta {
+    font-family: var(--font-mono); font-size: 12px;
+    color: var(--muted); margin-bottom: 2rem; letter-spacing: 0.02em;
+  }
+  .toc {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius-md); padding: 1.25rem 1.5rem; margin-bottom: 2.5rem;
+  }
+  .toc-title {
+    font-size: 11px; font-weight: 800;
+    text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--muted); margin-bottom: 0.75rem;
+  }
   .toc ol { padding-left: 1.25rem; }
-  .toc li { font-size: 14px; margin-bottom: .25rem; }
-  .toc a { color: var(--accent); text-decoration: none; }
-  .toc a:hover { text-decoration: underline; }
-  h2 { font-size: 1.3rem; font-weight: 700; margin: 2.5rem 0 1rem; padding-bottom: .5rem; border-bottom: 0.5px solid var(--border); }
-  h3 { font-size: 1rem; font-weight: 600; margin: 1.5rem 0 .5rem; }
-  p { margin-bottom: 1rem; color: var(--text); }
-  ul, ol { margin: .5rem 0 1rem 1.5rem; }
-  li { margin-bottom: .35rem; }
-  .callout { border-radius: 10px; padding: 1rem 1.25rem; margin: 1.25rem 0; font-size: 15px; }
-  .callout-info { background: var(--info-bg); border: 0.5px solid var(--info-border); }
-  .callout-warn { background: var(--warn-bg); border: 0.5px solid var(--warn-border); }
-  .callout-danger { background: var(--danger-bg); border: 0.5px solid var(--danger-border); }
-  .callout-success { background: var(--success-bg); border: 0.5px solid var(--success-border); }
-  .callout-label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; margin-bottom: .3rem; color: var(--muted); }
-  table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 1rem 0 1.5rem; }
-  th { background: var(--surface); font-weight: 600; text-align: left; padding: 10px 12px; border: 0.5px solid var(--border); font-size: 13px; }
-  td { padding: 10px 12px; border: 0.5px solid var(--border); vertical-align: top; }
+  .toc li { font-size: 14px; font-weight: 600; margin-bottom: 0.3rem; }
+  .toc a { color: var(--primary); text-decoration: none; }
+  .toc a:hover { text-decoration: underline; opacity: 0.75; }
+  h2 {
+    font-family: var(--font-heading);
+    font-size: 1.2rem; font-weight: 700; letter-spacing: -0.02em;
+    margin: 2.5rem 0 0.875rem;
+    padding-bottom: 0.625rem; border-bottom: 1px solid var(--border);
+  }
+  h3 { font-size: 0.9375rem; font-weight: 800; margin: 1.5rem 0 0.5rem; }
+  p { margin-bottom: 1rem; font-size: 15px; }
+  ul, ol { margin: 0.5rem 0 1rem 1.5rem; }
+  li { font-size: 15px; margin-bottom: 0.4rem; }
+  a { color: var(--primary); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  strong { font-weight: 700; }
+  .callout {
+    border-radius: var(--radius-sm); padding: 1rem 1.25rem;
+    margin: 1.25rem 0; font-size: 14.5px; line-height: 1.65;
+  }
+  .callout-info    { background: var(--info-surface);    border: 1px solid var(--info-border); }
+  .callout-warn    { background: var(--warning-surface); border: 1px solid var(--warning-border); }
+  .callout-danger  { background: var(--danger-surface);  border: 1px solid var(--danger-border); }
+  .callout-success { background: var(--success-surface); border: 1px solid var(--success-border); }
+  .callout-label {
+    font-size: 10.5px; font-weight: 800;
+    text-transform: uppercase; letter-spacing: 0.08em;
+    margin-bottom: 0.35rem; color: var(--muted);
+  }
+  table { width: 100%; border-collapse: collapse; font-size: 13.5px; margin: 1rem 0 1.5rem; }
+  th {
+    background: var(--surface); font-weight: 800; text-align: left;
+    padding: 10px 14px; border: 1px solid var(--border);
+    font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted);
+  }
+  td { padding: 10px 14px; border: 1px solid var(--border); vertical-align: top; }
   tr:nth-child(even) td { background: var(--surface); }
-  a { color: var(--accent); }
-  .chip { display: inline-block; background: var(--surface); border: 0.5px solid var(--border); border-radius: 6px; padding: 1px 8px; font-size: 12px; font-family: monospace; }
-  .contact-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: 12px; padding: 1.25rem 1.5rem; margin-top: 1rem; }
-  .contact-card strong { display: block; margin-bottom: .25rem; }
-  hr { border: none; border-top: 0.5px solid var(--border); margin: 2.5rem 0; }
-  .footer { color: var(--muted); font-size: 13px; margin-top: 3rem; padding-top: 1.5rem; border-top: 0.5px solid var(--border); }
+  code, .chip {
+    font-family: var(--font-mono); font-size: 12.5px;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 6px; padding: 1px 7px; color: var(--primary);
+  }
+  .contact-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius-md); padding: 1.25rem 1.5rem; margin-top: 1rem;
+  }
+  .contact-card strong {
+    display: block; font-size: 13px; font-weight: 800;
+    text-transform: uppercase; letter-spacing: 0.06em;
+    color: var(--muted); margin-bottom: 0.2rem; margin-top: 1rem;
+  }
+  .contact-card strong:first-child { margin-top: 0; }
+  hr { border: none; border-top: 1px solid var(--border); margin: 2.5rem 0; }
+  .footer {
+    color: var(--muted); font-size: 12.5px;
+    margin-top: 3rem; padding-top: 1.5rem;
+    border-top: 1px solid var(--border); line-height: 1.6;
+  }
+  .footer p + p { margin-top: 0.5rem; }
+  @media (max-width: 600px) {
+    body { padding: 0 1rem; }
+    h1 { font-size: 1.6rem; }
+    h2 { font-size: 1.1rem; }
+    .toc, .contact-card { padding: 1rem 1.125rem; }
+    th, td { padding: 8px 10px; }
+  }
 </style>
 </head>
 <body>
@@ -86,7 +161,7 @@
 
   <div class="logo">Fr.</div>
   <h1>Privacy Policy</h1>
-  <p class="meta">Effective date: March 27, 2026 &nbsp;·&nbsp; Last updated: March 27, 2026 &nbsp;·&nbsp; Version 1.0</p>
+  <p class="meta">Effective: March 27, 2026 &nbsp;·&nbsp; Last updated: March 27, 2026 &nbsp;·&nbsp; v1.0</p>
 
   <div class="callout callout-info">
     <div class="callout-label">Plain-English Summary</div>
@@ -114,15 +189,12 @@
     </ol>
   </div>
 
-  <!-- 1 -->
   <h2 id="who">1. Who we are</h2>
-  <p>Fr. ("we", "us", "our") is a messaging application operated by <strong>[YOUR COMPANY LEGAL NAME]</strong>, registered in <strong>[COUNTRY/STATE]</strong>.</p>
+  <p>Fr. ("we", "us", "our") is a messaging application operated by <strong>Sircle Networking Pvt Ltd</strong>, a private limited company incorporated in India.</p>
   <p>For users in the European Economic Area (EEA) and the UK, we are the <strong>data controller</strong> of your personal data as defined under the General Data Protection Regulation (GDPR) and UK GDPR.</p>
-  <p>Our designated representative for GDPR enquiries: <a href="mailto:privacy@fr.app">privacy@fr.app</a></p>
+  <p>Our designated representative for GDPR and privacy enquiries: <a href="mailto:support@cocial.in?subject=Fr.%20-%20Support%20%7C%20Privacy%20Request">support@cocial.in</a></p>
 
-  <!-- 2 -->
   <h2 id="what">2. What data we collect</h2>
-
   <h3>2.1 Account data</h3>
   <table>
     <tr><th>Data item</th><th>Why collected</th><th>Stored as</th></tr>
@@ -170,7 +242,6 @@
     <li>Behavioural advertising profiles</li>
   </ul>
 
-  <!-- 3 -->
   <h2 id="how">3. How we collect data</h2>
   <ul>
     <li><strong>Directly from you</strong> — when you complete onboarding, set a display name, upload a photo, or send messages.</li>
@@ -178,7 +249,6 @@
     <li><strong>From third-party sign-in providers</strong> — if you choose "Continue with Google" or "Continue with Apple", those services pass a unique user ID and optionally a display name to us. We do not receive your password.</li>
   </ul>
 
-  <!-- 4 -->
   <h2 id="why">4. Why we process your data (legal bases)</h2>
   <p>Under GDPR, we rely on the following legal bases:</p>
   <table>
@@ -190,7 +260,6 @@
     <tr><td>Retaining hashed ban identifiers after account deletion</td><td>Legitimate interests — preventing re-registration of sanctioned users (Art. 6(1)(f))</td></tr>
   </table>
 
-  <!-- 5 -->
   <h2 id="e2ee">5. End-to-end encryption</h2>
   <p>When you enable E2EE in a chat, all messages are encrypted on your device using <strong>X25519 Diffie-Hellman key exchange</strong> with <strong>XSalsa20-Poly1305</strong> authenticated encryption — the same cryptographic primitives used by Signal and NaCl.</p>
   <ul>
@@ -200,7 +269,6 @@
     <li>We cannot decrypt your E2EE messages under any circumstances.</li>
   </ul>
 
-  <!-- 6 -->
   <h2 id="sharing">6. Who we share data with</h2>
   <p>We do not sell your data. We share data only with:</p>
   <table>
@@ -213,7 +281,6 @@
   </table>
   <p>All third-party processors are bound by data processing agreements and are required to protect your data to at least the same standard as this policy.</p>
 
-  <!-- 7 -->
   <h2 id="retention">7. How long we keep data</h2>
   <table>
     <tr><th>Data type</th><th>Retention period</th></tr>
@@ -225,12 +292,11 @@
     <tr><td>Backup logs</td><td>Rolling 30-day window</td></tr>
   </table>
 
-  <!-- 8 -->
   <h2 id="minors">8. Children and minors</h2>
   <p><strong>Fr. is not intended for children under 13 years of age.</strong> We do not knowingly collect personal data from anyone under 13. If we become aware that we have collected data from a child under 13 without verifiable parental consent, we will delete that account promptly.</p>
 
   <h3>8.1 Users aged 13–17</h3>
-  <p>Users who indicate they are between 13 and 17 years old are flagged as minors in our system (<span class="chip">is_minor = true</span>). Minor accounts have additional protections:</p>
+  <p>Users who indicate they are between 13 and 17 years old are flagged as minors in our system (<code>is_minor = true</code>). Minor accounts have additional protections:</p>
   <ul>
     <li>Direct messages between minors and adults are blocked at the database level.</li>
     <li>Minor accounts are subject to stricter moderation review.</li>
@@ -241,11 +307,9 @@
   <p>Fr. is primarily a private messaging application. Under Australia's Online Safety Amendment (Social Media Minimum Age) Act 2024, messaging services are currently excluded from the under-16 age restriction obligation. We monitor eSafety Commissioner guidance and will update our practices if Fr. is ever classified as an age-restricted social media platform.</p>
 
   <h3>8.3 COPPA (USA)</h3>
-  <p>Fr. is directed at users aged 13 and above. We do not knowingly collect personal information from children under 13 as defined under the Children's Online Privacy Protection Act (COPPA). If you believe a child under 13 has created an account, please contact us at <a href="mailto:privacy@fr.app">privacy@fr.app</a> and we will delete the account.</p>
+  <p>Fr. is directed at users aged 13 and above. We do not knowingly collect personal information from children under 13 as defined under the Children's Online Privacy Protection Act (COPPA). If you believe a child under 13 has created an account, please contact us at <a href="mailto:support@cocial.in?subject=Fr.%20-%20Support%20%7C%20COPPA%20Report">support@cocial.in</a> and we will delete the account.</p>
 
-  <!-- 9 -->
   <h2 id="rights">9. Your rights</h2>
-
   <h3>9.1 Rights for all users</h3>
   <ul>
     <li><strong>Delete your account:</strong> Go to Profile → menu → Delete Account. Your data is permanently purged within 7 days.</li>
@@ -267,7 +331,7 @@
   </ul>
   <div class="callout callout-info">
     <div class="callout-label">GDPR Deletion &amp; Erasure Note</div>
-    We will respond to all GDPR rights requests within <strong>30 days</strong> (extendable by a further 60 days for complex requests, with notice to you). To submit a request, email <a href="mailto:privacy@fr.app">privacy@fr.app</a> with the subject line "GDPR Data Request". We may ask you to verify your identity before processing the request.<br><br>
+    We will respond to all GDPR rights requests within <strong>30 days</strong> (extendable by a further 60 days for complex requests, with notice to you). To submit a request, email <a href="mailto:support@cocial.in?subject=Fr.%20-%20Support%20%7C%20GDPR%20Data%20Request">support@cocial.in</a> with the subject line "Fr. - Support | GDPR Data Request". We may ask you to verify your identity before processing the request.<br><br>
     Exception: If your account was permanently banned for serious safety violations, we retain hashed identifiers (phone hash, device hash) to prevent re-registration. This is based on our legitimate interest in platform safety. You may contest this at the above email address.
   </div>
 
@@ -281,9 +345,8 @@
     <li>Correct inaccurate personal information</li>
     <li>Limit use and disclosure of sensitive personal information</li>
   </ul>
-  <p>To submit a CCPA request, email <a href="mailto:privacy@fr.app">privacy@fr.app</a> or use the in-app deletion flow. We will confirm receipt within 10 business days and respond within 45 calendar days.</p>
+  <p>To submit a CCPA request, email <a href="mailto:support@cocial.in?subject=Fr.%20-%20Support%20%7C%20CCPA%20Request">support@cocial.in</a> or use the in-app deletion flow. We will confirm receipt within 10 business days and respond within 45 calendar days.</p>
 
-  <!-- 10 -->
   <h2 id="security">10. Security</h2>
   <p>We implement the following technical and organisational measures to protect your data:</p>
   <ul>
@@ -295,18 +358,16 @@
     <li>Row-Level Security (RLS) policies on all database tables</li>
     <li>Supabase with role-based access control</li>
   </ul>
-  <p>No method of electronic transmission or storage is 100% secure. If you discover a security vulnerability, please report it responsibly to <a href="mailto:security@fr.app">security@fr.app</a>.</p>
+  <p>No method of electronic transmission or storage is 100% secure. If you discover a security vulnerability, please report it responsibly to <a href="mailto:support@cocial.in?subject=Fr.%20-%20Support%20%7C%20Security%20Vulnerability">support@cocial.in</a>.</p>
 
-  <!-- 11 -->
   <h2 id="international">11. International data transfers</h2>
-  <p>Fr. is operated from <strong>[YOUR COUNTRY]</strong>. If you access Fr. from the EEA, UK, or other regions with data protection laws, your data may be transferred to and processed in countries that may not provide the same level of data protection as your home country.</p>
+  <p>Fr. is operated from India by Sircle Networking Pvt Ltd. If you access Fr. from the EEA, UK, or other regions with data protection laws, your data may be transferred to and processed in countries that may not provide the same level of data protection as your home country.</p>
   <p>For transfers of EEA personal data to our US-based processors, we rely on:</p>
   <ul>
     <li>Standard Contractual Clauses (SCCs) as approved by the European Commission</li>
     <li>The EU-US Data Privacy Framework where applicable</li>
   </ul>
 
-  <!-- 12 -->
   <h2 id="us-state">12. US state-specific rights</h2>
   <p>In addition to California (CCPA/CPRA) rights described in Section 9.3, residents of the following states have rights similar to those under GDPR — including rights to access, delete, correct, and opt out of the sale of personal data:</p>
   <ul>
@@ -316,9 +377,8 @@
     <li>Texas (TDPSA)</li>
     <li>Oregon (OCPA)</li>
   </ul>
-  <p>To exercise any of these rights, contact us at <a href="mailto:privacy@fr.app">privacy@fr.app</a>.</p>
+  <p>To exercise any of these rights, contact us at <a href="mailto:support@cocial.in?subject=Fr.%20-%20Support%20%7C%20Privacy%20Request">support@cocial.in</a>.</p>
 
-  <!-- 13 -->
   <h2 id="australia">13. Australian users</h2>
   <p>For users in Australia, this privacy policy is supplemented by our compliance with the <strong>Privacy Act 1988 (Cth)</strong> and the Australian Privacy Principles (APPs).</p>
   <p>You have the right to:</p>
@@ -329,7 +389,6 @@
   </ul>
   <p>We are not currently classified as an age-restricted social media platform under the Online Safety Amendment (Social Media Minimum Age) Act 2024. We continue to monitor eSafety Commissioner guidance and will update this policy if our classification changes.</p>
 
-  <!-- 14 -->
   <h2 id="changes">14. Changes to this policy</h2>
   <p>We may update this Privacy Policy from time to time. When we do, we will:</p>
   <ul>
@@ -339,30 +398,33 @@
   </ul>
   <p>Your continued use of Fr. after changes take effect constitutes acceptance of the revised policy.</p>
 
-  <!-- 15 -->
   <h2 id="contact">15. Contact us</h2>
   <div class="contact-card">
     <strong>Privacy enquiries &amp; data requests</strong>
-    <a href="mailto:privacy@fr.app">privacy@fr.app</a>
-    <br><br>
+    <a href="mailto:support@cocial.in?subject=Fr.%20-%20Support%20%7C%20Privacy%20Request">support@cocial.in</a>
+
     <strong>Security vulnerabilities</strong>
-    <a href="mailto:security@fr.app">security@fr.app</a>
-    <br><br>
-    <strong>Postal address</strong><br>
-    [YOUR COMPANY LEGAL NAME]<br>
-    [ADDRESS LINE 1]<br>
-    [CITY, STATE/COUNTRY, POSTAL CODE]
-    <br><br>
-    <strong>EU/UK GDPR Representative</strong><br>
-    <a href="mailto:privacy@fr.app">privacy@fr.app</a>
-    <br><br>
-    <strong>Response time commitment</strong><br>
+    <a href="mailto:support@cocial.in?subject=Fr.%20-%20Support%20%7C%20Security%20Vulnerability">support@cocial.in</a>
+
+    <strong>General support</strong>
+    <a href="mailto:support@cocial.in?subject=Fr.%20-%20Support">support@cocial.in</a>
+
+    <strong>EU/UK GDPR representative</strong>
+    <a href="mailto:support@cocial.in?subject=Fr.%20-%20Support%20%7C%20GDPR%20Enquiry">support@cocial.in</a>
+
+    <strong>Postal address</strong>
+    Sircle Networking Pvt Ltd<br>
+    Plot 299, 300, 311, Mallampet<br>
+    Jeedimetla, Hyderabad<br>
+    Telangana, India — 502325
+
+    <strong>Response time commitment</strong>
     We aim to respond to all privacy enquiries within <strong>5 business days</strong> and to complete data requests within <strong>30 days</strong>.
   </div>
 
   <div class="footer">
-    <p>© 2026 [YOUR COMPANY LEGAL NAME]. All rights reserved.</p>
-    <p style="margin-top:.5rem">This document was last reviewed for compliance with: GDPR (EU) · UK GDPR · CCPA/CPRA · COPPA · Virginia VCDPA · Australian Privacy Act 1988 · Apple App Store Guidelines (March 2026) · Google Play Developer Policy (March 2026) · Australia Online Safety Amendment Act 2024</p>
+    <p>© 2026 Sircle Networking Pvt Ltd. All rights reserved.</p>
+    <p>This document was last reviewed for compliance with: GDPR (EU) · UK GDPR · CCPA/CPRA · COPPA · Virginia VCDPA · Australian Privacy Act 1988 · Apple App Store Guidelines (March 2026) · Google Play Developer Policy (March 2026) · Australia Online Safety Amendment Act 2024</p>
   </div>
 
 </div>
