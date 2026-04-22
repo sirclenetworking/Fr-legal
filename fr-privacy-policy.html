@@ -201,7 +201,7 @@
     <tr><td>Display name</td><td>Shown to contacts</td><td>Plain text</td></tr>
     <tr><td>Age (integer)</td><td>Safety routing, minor protections</td><td>Plain integer (not shared)</td></tr>
     <tr><td>Age group</td><td>Feature gating</td><td>Enum (u18 / 18-24 / 25+)</td></tr>
-    <tr><td>Phone number</td><td>Account verification only</td><td><strong>SHA-256 hash only</strong> — raw number never stored</td></tr>
+    <tr><td>Phone number</td><td>Account verification only</td><td>Stored securely — your raw number is never retained</td></tr>
     <tr><td>Email address</td><td>Google/Apple sign-in (if used)</td><td>Managed by Google/Apple — we receive only a stable user ID</td></tr>
     <tr><td>Profile photo</td><td>Optional avatar</td><td>Uploaded to secure cloud storage</td></tr>
     <tr><td>Organisation / university</td><td>Optional, for Discover features</td><td>Plain text</td></tr>
@@ -218,7 +218,7 @@
     <tr><td>Device platform (iOS / Android)</td><td>App experience, safety</td></tr>
     <tr><td>Device brand &amp; model</td><td>Safety (ban prevention)</td></tr>
     <tr><td>Operating system version</td><td>Compatibility</td></tr>
-    <tr><td>Device fingerprint hash</td><td>Ban evasion prevention — stored as one-way hash only</td></tr>
+    <tr><td>Device fingerprint</td><td>Ban evasion prevention — stored securely and never used for advertising</td></tr>
   </table>
 
   <h3>2.3 Message data</h3>
@@ -235,9 +235,9 @@
 
   <h3>2.5 Data we do NOT collect</h3>
   <ul>
-    <li>Raw phone numbers (only the SHA-256 hash)</li>
+    <li>Raw phone numbers (we never store these in plain text)</li>
     <li>Location or GPS coordinates</li>
-    <li>Contact list contents (if you grant contact access for matching, all comparisons happen on-device — only hashed phone numbers are sent)</li>
+    <li>Contact list contents (if you grant contact access for matching, comparisons happen on-device — your contacts are never uploaded to our servers)</li>
     <li>Content of E2EE messages</li>
     <li>Behavioural advertising profiles</li>
   </ul>
@@ -261,19 +261,18 @@
   </table>
 
   <h2 id="e2ee">5. End-to-end encryption</h2>
-  <p>When you enable E2EE in a chat, all messages are encrypted on your device using <strong>X25519 Diffie-Hellman key exchange</strong> with <strong>XSalsa20-Poly1305</strong> authenticated encryption — the same cryptographic primitives used by Signal and NaCl.</p>
+  <p>When you enable E2EE in a chat, messages are encrypted on your device before they leave it. Only you and the person you're talking to can read them.</p>
   <ul>
-    <li>Your private key is generated on your device and stored in your device's secure enclave (iOS Secure Enclave / Android Keystore via expo-secure-store).</li>
-    <li>An encrypted backup of your private key (encrypted with a key derived from your phone number) is stored on our servers to enable key recovery if you reinstall the app.</li>
-    <li>Your public key is stored on our servers to enable key exchange with contacts.</li>
-    <li>We cannot decrypt your E2EE messages under any circumstances.</li>
+    <li>We cannot read, access, or hand over the content of E2EE messages — not to anyone, including law enforcement.</li>
+    <li>Encryption keys are generated and stored on your device. An encrypted backup is held on our servers solely to allow key recovery if you reinstall Fr.</li>
+    <li>If you lose access to your device and have no recovery backup, E2EE messages cannot be recovered by you or by us.</li>
   </ul>
 
   <h2 id="sharing">6. Who we share data with</h2>
   <p>We do not sell your data. We share data only with:</p>
   <table>
     <tr><th>Recipient</th><th>Purpose</th><th>Location</th></tr>
-    <tr><td>Supabase Inc.</td><td>Database hosting and authentication infrastructure</td><td>USA (EU data centre available)</td></tr>
+    <tr><td>Cloud infrastructure provider</td><td>Database hosting and authentication infrastructure</td><td>USA (EU data centre available)</td></tr>
     <tr><td>Google Firebase</td><td>Secondary authentication (social sign-in verification)</td><td>USA</td></tr>
     <tr><td>Apple</td><td>Apple Sign-In</td><td>USA</td></tr>
     <tr><td>Expo / Expo Push</td><td>Push notification delivery</td><td>USA</td></tr>
@@ -296,7 +295,7 @@
   <p><strong>Fr. is not intended for children under 13 years of age.</strong> We do not knowingly collect personal data from anyone under 13. If we become aware that we have collected data from a child under 13 without verifiable parental consent, we will delete that account promptly.</p>
 
   <h3>8.1 Users aged 13–17</h3>
-  <p>Users who indicate they are between 13 and 17 years old are flagged as minors in our system (<code>is_minor = true</code>). Minor accounts have additional protections:</p>
+  <p>Users who indicate they are between 13 and 17 years old are flagged as minors internally and receive additional protections:</p>
   <ul>
     <li>Direct messages between minors and adults are blocked at the database level.</li>
     <li>Minor accounts are subject to stricter moderation review.</li>
@@ -348,17 +347,9 @@
   <p>To submit a CCPA request, email <a href="mailto:support@cocial.in?subject=Fr.%20-%20Support%20%7C%20CCPA%20Request">support@cocial.in</a> or use the in-app deletion flow. We will confirm receipt within 10 business days and respond within 45 calendar days.</p>
 
   <h2 id="security">10. Security</h2>
-  <p>We implement the following technical and organisational measures to protect your data:</p>
-  <ul>
-    <li>TLS encryption for all data in transit</li>
-    <li>AES-256 encryption for data at rest</li>
-    <li>End-to-end encryption (X25519 + XSalsa20-Poly1305) for opted-in message threads</li>
-    <li>Private keys stored in device secure enclaves</li>
-    <li>Phone numbers stored as SHA-256 hashes only — raw values never persisted</li>
-    <li>Row-Level Security (RLS) policies on all database tables</li>
-    <li>Supabase with role-based access control</li>
-  </ul>
-  <p>No method of electronic transmission or storage is 100% secure. If you discover a security vulnerability, please report it responsibly to <a href="mailto:support@cocial.in?subject=Fr.%20-%20Support%20%7C%20Security%20Vulnerability">support@cocial.in</a>.</p>
+  <p>We use industry-standard technical and organisational measures to protect your data, including encryption in transit and at rest, access controls, and regular security reviews.</p>
+  <p>Phone numbers are never stored in plain text. Message content in E2EE chats is inaccessible to us by design. Access to our systems is strictly limited to authorised personnel.</p>
+  <p>No system is 100% secure. If you discover a security vulnerability, please report it responsibly to <a href="mailto:support@cocial.in?subject=Fr.%20-%20Support%20%7C%20Security%20Vulnerability">support@cocial.in</a>.</p>
 
   <h2 id="international">11. International data transfers</h2>
   <p>Fr. is operated from India by Sircle Networking Pvt Ltd. If you access Fr. from the EEA, UK, or other regions with data protection laws, your data may be transferred to and processed in countries that may not provide the same level of data protection as your home country.</p>
