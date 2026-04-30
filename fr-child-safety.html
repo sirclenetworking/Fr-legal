@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Child Safety Standards — Fr.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&family=Nunito:wght@400;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:             #FFFFFF;
+    --surface:        #F7F7F7;
+    --border:         #E8E8E8;
+    --text:           #111111;
+    --muted:          #888888;
+    --primary:        #C4614A;
+    --primary-text:   #FFFFFF;
+    --danger-surface: rgba(217,48,37,0.07);
+    --danger-border:  rgba(217,48,37,0.2);
+    --success-surface:rgba(52,168,83,0.07);
+    --success-border: rgba(52,168,83,0.2);
+    --warning-surface:rgba(227,116,0,0.07);
+    --warning-border: rgba(227,116,0,0.2);
+    --radius-xs: 8px;
+    --radius-sm: 12px;
+    --radius-md: 16px;
+    --font-heading: 'Bricolage Grotesque', sans-serif;
+    --font-body:    'Nunito', sans-serif;
+    --font-mono:    'DM Mono', monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg:             #0D0D0D;
+      --surface:        #1A1A1A;
+      --border:         #2A2A2A;
+      --text:           #F0F0F0;
+      --muted:          #888888;
+      --primary:        #F0836A;
+      --primary-text:   #FFFFFF;
+      --danger-surface: rgba(232,96,96,0.12);
+      --danger-border:  rgba(232,96,96,0.3);
+      --success-surface:rgba(76,175,130,0.12);
+      --success-border: rgba(76,175,130,0.3);
+      --warning-surface:rgba(240,160,106,0.12);
+      --warning-border: rgba(240,160,106,0.3);
+    }
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--text);
+    background: var(--bg);
+    padding: 0 1.25rem;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page { max-width: 740px; margin: 0 auto; padding: 3rem 0 6rem; }
+  .logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px; height: 52px;
+    background: var(--primary);
+    border-radius: var(--radius-sm);
+    color: var(--primary-text);
+    font-family: var(--font-heading);
+    font-size: 20px; font-weight: 700;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.5px;
+  }
+  h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 5vw, 2.25rem);
+    font-weight: 700; letter-spacing: -0.03em; line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+  .meta {
+    font-family: var(--font-mono);
+    font-size: 12px; color: var(--muted);
+    margin-bottom: 2rem; letter-spacing: 0.02em;
+  }
+  .toc {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+  .toc-title {
+    font-size: 11px; font-weight: 800;
+    text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--muted); margin-bottom: 0.75rem;
+  }
+  .toc ol { padding-left: 1.25rem; }
+  .toc li { font-size: 14px; font-weight: 600; margin-bottom: 0.3rem; }
+  .toc a { color: var(--primary); text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+  h2 {
+    font-family: var(--font-heading);
+    font-size: 1.2rem; font-weight: 700; letter-spacing: -0.02em;
+    margin: 2.5rem 0 0.875rem;
+    padding-bottom: 0.625rem;
+    border-bottom: 1px solid var(--border);
+  }
+  p { margin-bottom: 1rem; font-size: 15px; }
+  ul { margin: 0.5rem 0 1rem 1.5rem; }
+  li { font-size: 15px; margin-bottom: 0.4rem; }
+  a { color: var(--primary); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  strong { font-weight: 700; }
+  .callout {
+    border-radius: var(--radius-sm);
+    padding: 1rem 1.25rem;
+    margin: 1.25rem 0;
+    font-size: 14.5px; line-height: 1.65;
+  }
+  .callout-danger  { background: var(--danger-surface);  border: 1px solid var(--danger-border); }
+  .callout-warn    { background: var(--warning-surface); border: 1px solid var(--warning-border); }
+  .callout-label {
+    font-size: 10.5px; font-weight: 800;
+    text-transform: uppercase; letter-spacing: 0.08em;
+    margin-bottom: 0.35rem; color: var(--muted);
+  }
+  .contact-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1.25rem 1.5rem;
+    margin-top: 1rem;
+  }
+  .contact-card strong {
+    display: block;
+    font-size: 13px; font-weight: 800;
+    text-transform: uppercase; letter-spacing: 0.06em;
+    color: var(--muted);
+    margin-bottom: 0.2rem; margin-top: 1rem;
+  }
+  .contact-card strong:first-child { margin-top: 0; }
+  .footer {
+    color: var(--muted); font-size: 12.5px;
+    margin-top: 3rem; padding-top: 1.5rem;
+    border-top: 1px solid var(--border); line-height: 1.6;
+  }
+  .footer p + p { margin-top: 0.5rem; }
+  @media (max-width: 600px) {
+    body { padding: 0 1rem; }
+    h1 { font-size: 1.6rem; }
+    h2 { font-size: 1.1rem; }
+    .toc, .contact-card { padding: 1rem 1.125rem; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="logo">Fr.</div>
+  <h1>Child Safety Standards</h1>
+  <p class="meta">Developer: Sircle Networking Pvt Ltd &nbsp;·&nbsp; App: Fr. &nbsp;·&nbsp; Last updated: April 30, 2026</p>
+
+  <div class="callout callout-danger">
+    <div class="callout-label">Zero tolerance</div>
+    Fr., developed by Sircle Networking Pvt Ltd, has a zero-tolerance policy toward Child Sexual Abuse and Exploitation (CSAE) and Child Sexual Abuse Material (CSAM). The safety of children is our highest priority.
+  </div>
+
+  <div class="toc">
+    <div class="toc-title">Contents</div>
+    <ol>
+      <li><a href="#prohibited">What is prohibited</a></li>
+      <li><a href="#reporting">How to report a concern</a></li>
+      <li><a href="#action">Action we take</a></li>
+      <li><a href="#contact">Child safety point of contact</a></li>
+    </ol>
+  </div>
+
+  <h2 id="prohibited">1. What is prohibited</h2>
+  <p>The following are strictly forbidden on Fr. and will result in immediate account termination:</p>
+  <ul>
+    <li>Any content that sexually depicts or exploits a minor (CSAM)</li>
+    <li>Grooming, solicitation, or any attempt to gain inappropriate access to a child</li>
+    <li>Sharing, distributing, or requesting CSAM in any form</li>
+    <li>Using Fr. to facilitate exploitation or abuse of minors</li>
+    <li>Any communication that sexualizes or endangers children</li>
+  </ul>
+
+  <h2 id="reporting">2. How to report a concern</h2>
+  <p>If you encounter content or behaviour on Fr. that you believe involves the abuse or exploitation of a child, please report it immediately:</p>
+  <ul>
+    <li><strong>In-app:</strong> Tap and hold any message, or visit a user's profile and tap "Report"</li>
+    <li><strong>Email:</strong> <a href="mailto:support@cocial.in">support@cocial.in</a></li>
+    <li><strong>NCMEC CyberTipline:</strong> <a href="https://www.missingkids.org/gethelpnow/cybertipline" target="_blank" rel="noopener">missingkids.org/cybertipline</a></li>
+  </ul>
+
+  <div class="callout callout-warn">
+    <div class="callout-label">Emergency</div>
+    If a child is in immediate danger, contact your local law enforcement immediately.
+  </div>
+
+  <h2 id="action">3. Action we take</h2>
+  <p>When we become aware of CSAM or CSAE activity on Fr., we:</p>
+  <ul>
+    <li>Immediately remove the content and suspend the account</li>
+    <li>Preserve relevant evidence</li>
+    <li>Report to NCMEC and cooperate fully with law enforcement</li>
+  </ul>
+
+  <h2 id="contact">4. Child safety point of contact</h2>
+  <p>Sircle Networking Pvt Ltd provides a designated point of contact who is available to respond to child safety inquiries, including from Google Play and law enforcement.</p>
+
+  <div class="contact-card">
+    <strong>Contact email</strong>
+    <a href="mailto:support@cocial.in">support@cocial.in</a>
+
+    <strong>Developer</strong>
+    Sircle Networking Pvt Ltd
+
+    <strong>App</strong>
+    Fr. — as listed on Google Play
+  </div>
+
+  <div class="footer">
+    <p>© 2026 Sircle Networking Pvt Ltd. All rights reserved.</p>
+    <p>
+      <a href="fr-privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp;
+      <a href="fr-terms-of-service.html">Terms of Service</a>
+    </p>
+  </div>
+
+</div>
+</body>
+</html>
