@@ -238,10 +238,13 @@
   <ul>
     <li>Raw phone numbers (we never store these in plain text)</li>
     <li>Location or GPS coordinates</li>
-    <li>Contact list contents (if you grant contact access for matching, comparisons happen on-device — your contacts are never uploaded to our servers)</li>
+    <li>Raw contact list contents — see Section 2.6 for exactly how contact matching works</li>
     <li>Content of E2EE messages</li>
     <li>Behavioural advertising profiles</li>
   </ul>
+
+  <h3>2.6 How contact matching works</h3>
+  <p>If you grant contacts access, Fr. converts each phone number in your contacts into a one-way cryptographic hash <strong>on your device</strong> before anything is sent anywhere. Only these hashes — never the raw phone numbers or contact names — are sent to our servers to check which of your contacts are also on Fr. A hash cannot be reversed back into a phone number. We do not store your contact list, and we do not use this data for any purpose other than showing you mutual matches.</p>
 
   <h2 id="how">3. How we collect data</h2>
   <ul>
