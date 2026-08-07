@@ -161,11 +161,11 @@
 
   <div class="logo">Fr.</div>
   <h1>Privacy Policy</h1>
-  <p class="meta">Effective: March 27, 2026 &nbsp;·&nbsp; Last updated: March 27, 2026 &nbsp;·&nbsp; v1.0</p>
+  <p class="meta">Effective: March 27, 2026 &nbsp;·&nbsp; Last updated: August 7, 2026 &nbsp;·&nbsp; v1.1</p>
 
   <div class="callout callout-info">
     <div class="callout-label">Plain-English Summary</div>
-    Fr. is built around the idea that your conversations should disappear. We collect the minimum data needed to keep the app running and you safe. We do not sell your data to anyone. Most messages are encrypted end-to-end — even we cannot read them. You can delete your account and all your data at any time from inside the app.
+    Fr. is built around the idea that your conversations should disappear. We collect the minimum data needed to keep the app running and you safe. We do not sell your data to anyone. Most messages are encrypted end-to-end — even we cannot read them. Our AI chat features send your messages to a third-party AI provider to generate responses, only after you agree — see Section 6. You can delete your account and all your data at any time from inside the app.
   </div>
 
   <div class="toc">
@@ -176,6 +176,7 @@
       <li><a href="#how">How we collect it</a></li>
       <li><a href="#why">Why we process it (legal bases)</a></li>
       <li><a href="#e2ee">End-to-end encryption</a></li>
+      <li><a href="#ai-features">AI features &amp; third-party AI sharing</a></li>
       <li><a href="#sharing">Who we share data with</a></li>
       <li><a href="#retention">How long we keep data</a></li>
       <li><a href="#minors">Children and minors</a></li>
@@ -257,6 +258,7 @@
     <tr><td>Account safety, minor protection, ban enforcement</td><td>Legitimate interests (Art. 6(1)(f))</td></tr>
     <tr><td>Compliance with legal obligations (e.g. GDPR deletion requests)</td><td>Legal obligation (Art. 6(1)(c))</td></tr>
     <tr><td>Optional features (avatar, bio, organisation)</td><td>Consent — you provide these voluntarily (Art. 6(1)(a))</td></tr>
+    <tr><td>Sending your AI-chat messages to our third-party AI provider</td><td>Consent — you explicitly opt in before each AI feature is used (Art. 6(1)(a))</td></tr>
     <tr><td>Retaining hashed ban identifiers after account deletion</td><td>Legitimate interests — preventing re-registration of sanctioned users (Art. 6(1)(f))</td></tr>
   </table>
 
@@ -268,11 +270,25 @@
     <li>If you lose access to your device and have no recovery backup, E2EE messages cannot be recovered by you or by us.</li>
   </ul>
 
-  <h2 id="sharing">6. Who we share data with</h2>
+  <h2 id="ai-features">6. AI features &amp; third-party AI sharing</h2>
+  <p>Fr. includes optional AI chat features — an AI companion ("Wren", one-on-one) and an AI group chat ("Rook", "Luma", and "Vex"). These are <strong>not</strong> end-to-end encrypted and are separate from your regular conversations with other people.</p>
+
+  <h3>6.1 What is sent, and to whom</h3>
+  <p>When you send a message in an AI chat feature, the text of that message and a limited window of your recent conversation history in that same AI chat (used so the AI can hold a coherent conversation) is sent to <strong>Microsoft Azure OpenAI Service</strong>, our third-party AI processing provider, solely to generate a reply. Azure OpenAI processes this content to return a response and does not use it to train its own or any third-party foundation models.</p>
+  <p>We do not send your other conversations, your contacts, or your account data (beyond a pseudonymous identifier used for usage-limit enforcement) to this provider.</p>
+
+  <h3>6.2 Consent</h3>
+  <p>Before you can send your first message to either AI feature, Fr. shows an in-app disclosure explaining what is sent and to whom, and asks you to explicitly agree. Consent is recorded separately for the AI companion and the AI group chat, and you can decline and exit either screen without sending anything.</p>
+
+  <h3>6.3 Retention</h3>
+  <p>AI chat messages are ephemeral, like other messages in Fr., and are automatically deleted from your device and our systems on the same 24-hour expiry schedule described in Section 2.3. Please avoid sharing sensitive information (financial, health, or identity details) in AI chats.</p>
+
+  <h2 id="sharing">7. Who we share data with</h2>
   <p>We do not sell your data. We share data only with:</p>
   <table>
     <tr><th>Recipient</th><th>Purpose</th><th>Location</th></tr>
     <tr><td>Cloud infrastructure provider</td><td>Database hosting and authentication infrastructure</td><td>USA (EU data centre available)</td></tr>
+    <tr><td>Microsoft Azure OpenAI Service</td><td>Generating responses for the optional AI chat features, only after you consent (see Section 6)</td><td>USA</td></tr>
     <tr><td>Google Firebase</td><td>Secondary authentication (social sign-in verification)</td><td>USA</td></tr>
     <tr><td>Apple</td><td>Apple Sign-In</td><td>USA</td></tr>
     <tr><td>Expo / Expo Push</td><td>Push notification delivery</td><td>USA</td></tr>
@@ -280,10 +296,10 @@
   </table>
   <p>All third-party processors are bound by data processing agreements and are required to protect your data to at least the same standard as this policy.</p>
 
-  <h2 id="retention">7. How long we keep data</h2>
+  <h2 id="retention">8. How long we keep data</h2>
   <table>
     <tr><th>Data type</th><th>Retention period</th></tr>
-    <tr><td>Ephemeral messages</td><td>Deleted automatically at the expiry time set for each chat (minimum 1 hour, default 24 hours)</td></tr>
+    <tr><td>Ephemeral messages (including AI chats)</td><td>Deleted automatically at the expiry time set for each chat (minimum 1 hour, default 24 hours)</td></tr>
     <tr><td>Account data</td><td>Retained while your account is active</td></tr>
     <tr><td>Soft-deleted accounts</td><td>7-day grace period, then permanently purged from all systems</td></tr>
     <tr><td>Hashed ban identifiers (phone, device)</td><td>Retained indefinitely to prevent re-registration — stored as irreversible hashes, not raw data</td></tr>
@@ -291,10 +307,10 @@
     <tr><td>Backup logs</td><td>Rolling 30-day window</td></tr>
   </table>
 
-  <h2 id="minors">8. Children and minors</h2>
+  <h2 id="minors">9. Children and minors</h2>
   <p><strong>Fr. is not intended for children under 13 years of age.</strong> We do not knowingly collect personal data from anyone under 13. If we become aware that we have collected data from a child under 13 without verifiable parental consent, we will delete that account promptly.</p>
 
-  <h3>8.1 Users aged 13–17</h3>
+  <h3>9.1 Users aged 13–17</h3>
   <p>Users who indicate they are between 13 and 17 years old are flagged as minors internally and receive additional protections:</p>
   <ul>
     <li>Direct messages between minors and adults are blocked at the database level.</li>
@@ -302,21 +318,21 @@
     <li>Age is self-reported via a scroll wheel during onboarding. We rely on users providing their accurate age. If we receive a credible report or evidence that a user has misrepresented their age, we will investigate and take action including account suspension.</li>
   </ul>
 
-  <h3>8.2 Australia</h3>
+  <h3>9.2 Australia</h3>
   <p>Fr. is primarily a private messaging application. Under Australia's Online Safety Amendment (Social Media Minimum Age) Act 2024, messaging services are currently excluded from the under-16 age restriction obligation. We monitor eSafety Commissioner guidance and will update our practices if Fr. is ever classified as an age-restricted social media platform.</p>
 
-  <h3>8.3 COPPA (USA)</h3>
+  <h3>9.3 COPPA (USA)</h3>
   <p>Fr. is directed at users aged 13 and above. We do not knowingly collect personal information from children under 13 as defined under the Children's Online Privacy Protection Act (COPPA). If you believe a child under 13 has created an account, please contact us at <a href="mailto:support@cocial.in?subject=Fr.%20-%20Support%20%7C%20COPPA%20Report">support@cocial.in</a> and we will delete the account.</p>
 
-  <h2 id="rights">9. Your rights</h2>
-  <h3>9.1 Rights for all users</h3>
+  <h2 id="rights">10. Your rights</h2>
+  <h3>10.1 Rights for all users</h3>
   <ul>
     <li><strong>Delete your account:</strong> Go to Profile → menu → Delete Account. Your data is permanently purged within 7 days.</li>
     <li><strong>Edit your data:</strong> You can update your display name, avatar, bio, and organisation from your Profile screen at any time.</li>
     <li><strong>Block and report users:</strong> Available from any user profile or message menu.</li>
   </ul>
 
-  <h3>9.2 Rights under GDPR (EEA &amp; UK users)</h3>
+  <h3>10.2 Rights under GDPR (EEA &amp; UK users)</h3>
   <p>You have the right to:</p>
   <ul>
     <li><strong>Access</strong> — request a copy of the personal data we hold about you (Art. 15)</li>
@@ -325,7 +341,7 @@
     <li><strong>Restriction</strong> — ask us to restrict processing while a dispute is resolved (Art. 18)</li>
     <li><strong>Portability</strong> — receive your data in a machine-readable format (Art. 20)</li>
     <li><strong>Object</strong> — object to processing based on legitimate interests (Art. 21)</li>
-    <li><strong>Withdraw consent</strong> — where processing is based on consent, you may withdraw it at any time without affecting prior processing</li>
+    <li><strong>Withdraw consent</strong> — where processing is based on consent, including consent to AI chat data sharing described in Section 6, you may withdraw it at any time without affecting prior processing</li>
     <li><strong>Lodge a complaint</strong> — with your national data protection authority</li>
   </ul>
   <div class="callout callout-info">
@@ -334,7 +350,7 @@
     Exception: If your account was permanently banned for serious safety violations, we retain hashed identifiers (phone hash, device hash) to prevent re-registration. This is based on our legitimate interest in platform safety. You may contest this at the above email address.
   </div>
 
-  <h3>9.3 Rights under CCPA / CPRA (California users)</h3>
+  <h3>10.3 Rights under CCPA / CPRA (California users)</h3>
   <p>California residents have the right to:</p>
   <ul>
     <li>Know what personal information we collect and how it's used</li>
@@ -346,12 +362,12 @@
   </ul>
   <p>To submit a CCPA request, email <a href="mailto:support@cocial.in?subject=Fr.%20-%20Support%20%7C%20CCPA%20Request">support@cocial.in</a> or use the in-app deletion flow. We will confirm receipt within 10 business days and respond within 45 calendar days.</p>
 
-  <h2 id="security">10. Security</h2>
+  <h2 id="security">11. Security</h2>
   <p>We use industry-standard technical and organisational measures to protect your data, including encryption in transit and at rest, access controls, and regular security reviews.</p>
   <p>Phone numbers are never stored in plain text. Message content in E2EE chats is inaccessible to us by design. Access to our systems is strictly limited to authorised personnel.</p>
   <p>No system is 100% secure. If you discover a security vulnerability, please report it responsibly to <a href="mailto:support@cocial.in?subject=Fr.%20-%20Support%20%7C%20Security%20Vulnerability">support@cocial.in</a>.</p>
 
-  <h2 id="international">11. International data transfers</h2>
+  <h2 id="international">12. International data transfers</h2>
   <p>Fr. is operated from India by Sircle Networking Pvt Ltd. If you access Fr. from the EEA, UK, or other regions with data protection laws, your data may be transferred to and processed in countries that may not provide the same level of data protection as your home country.</p>
   <p>For transfers of EEA personal data to our US-based processors, we rely on:</p>
   <ul>
@@ -359,8 +375,8 @@
     <li>The EU-US Data Privacy Framework where applicable</li>
   </ul>
 
-  <h2 id="us-state">12. US state-specific rights</h2>
-  <p>In addition to California (CCPA/CPRA) rights described in Section 9.3, residents of the following states have rights similar to those under GDPR — including rights to access, delete, correct, and opt out of the sale of personal data:</p>
+  <h2 id="us-state">13. US state-specific rights</h2>
+  <p>In addition to California (CCPA/CPRA) rights described in Section 10.3, residents of the following states have rights similar to those under GDPR — including rights to access, delete, correct, and opt out of the sale of personal data:</p>
   <ul>
     <li>Virginia (VCDPA)</li>
     <li>Colorado (CPA)</li>
@@ -370,7 +386,7 @@
   </ul>
   <p>To exercise any of these rights, contact us at <a href="mailto:support@cocial.in?subject=Fr.%20-%20Support%20%7C%20Privacy%20Request">support@cocial.in</a>.</p>
 
-  <h2 id="australia">13. Australian users</h2>
+  <h2 id="australia">14. Australian users</h2>
   <p>For users in Australia, this privacy policy is supplemented by our compliance with the <strong>Privacy Act 1988 (Cth)</strong> and the Australian Privacy Principles (APPs).</p>
   <p>You have the right to:</p>
   <ul>
@@ -380,7 +396,7 @@
   </ul>
   <p>We are not currently classified as an age-restricted social media platform under the Online Safety Amendment (Social Media Minimum Age) Act 2024. We continue to monitor eSafety Commissioner guidance and will update this policy if our classification changes.</p>
 
-  <h2 id="changes">14. Changes to this policy</h2>
+  <h2 id="changes">15. Changes to this policy</h2>
   <p>We may update this Privacy Policy from time to time. When we do, we will:</p>
   <ul>
     <li>Update the "Last updated" date at the top of this document</li>
@@ -389,7 +405,7 @@
   </ul>
   <p>Your continued use of Fr. after changes take effect constitutes acceptance of the revised policy.</p>
 
-  <h2 id="contact">15. Contact us</h2>
+  <h2 id="contact">16. Contact us</h2>
   <div class="contact-card">
     <strong>Privacy enquiries &amp; data requests</strong>
     <a href="mailto:support@cocial.in?subject=Fr.%20-%20Support%20%7C%20Privacy%20Request">support@cocial.in</a>
@@ -411,7 +427,7 @@
 
   <div class="footer">
     <p>© 2026 Sircle Networking Pvt Ltd. All rights reserved.</p>
-    <p>This document was last reviewed for compliance with: GDPR (EU) · UK GDPR · CCPA/CPRA · COPPA · Virginia VCDPA · Australian Privacy Act 1988 · Apple App Store Guidelines (March 2026) · Google Play Developer Policy (March 2026) · Australia Online Safety Amendment Act 2024</p>
+    <p>This document was last reviewed for compliance with: GDPR (EU) · UK GDPR · CCPA/CPRA · COPPA · Virginia VCDPA · Australian Privacy Act 1988 · Apple App Store Guidelines (August 2026) · Google Play Developer Policy (March 2026) · Australia Online Safety Amendment Act 2024</p>
   </div>
 
 </div>
